@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :restaurants do
-    resources :reviews
+    resources :reviews, only: %i[create destroy]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
